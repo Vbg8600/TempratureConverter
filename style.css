@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.main {
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  height: 100vh;
+  background: url(image/wp6946106.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+body {
+  color: #a92525;
+}
+
+.container {
+    display: flexbox;
+  max-width: 1000px;
+  filter: drop-shadow(10px);
+  border-radius: 8px;
+  border:2px #011e28;
+  
+
+  font-family: 'Pacifico', cursive;
+
+  padding: 20px;
+}
+.container:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 25px 10px rgba(0, 0, 0, 0.4);
+  transition: 1s ease-in;
+  background: url(image/pexels-lumn-311039.jpg);
+  background-attachment: fixed;
+  background-size: 380px 700px;
+  border: none;
+
+}
+/* background: url(image/hot.gif);
+  background-size: 384px 384px;*/
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  gap: 10px;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 1s;
+}
+
+
+
+.title h1 {
+  background: #05c1ff;
+  background: linear-gradient(
+    to top,
+    #ff0505 25%,
+    #ff0000 48%,
+    #ff0000 67%,
+    #ffff00 100%,
+    #ff0000 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  letter-spacing: 1.2px;
+  font-size: 30px;
+  width: 600;
+  opacity: 0;
+  text-shadow: 1px 8px 15px #e83200;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 1s;
+}
+
+#celcius,
+#fahrenheit,
+#kelvin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+input {
+  flex: 5;
+  height: 60px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-radius: 8px 0 0 8px;
+  padding: 0 10px;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1s;
+  background: #7ad0ed;
+  
+}
+input:hover {
+  background: #5fa0dd;
+  transform: scale(0.1);
+  transition: 1.2s ease;
+border: none;
+  box-shadow: 0px 0px 1px 3px rgba(25, 63, 230, 0.4);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.icon {
+  flex: 1;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 5px;
+  text-align: center;
+  font-size: 30px;
+ color: #328ed4;
+  
+  background:#e9f8ff;
+  border-radius: 0 8px 8px 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
+}
+.icon:hover{
+    color: #f52505;
+}
+.button {
+  margin-top: 25px;
+  text-align: center;
+}
+.button button {
+  position: relative;
+    border: none;
+  outline: none;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  -webkit-transition-duration: 0.4s;
+  cursor: pointer;
+  transition: 0.4s;
+  overflow: hidden;
+  text-decoration: none;
+  background: #1780e2;
+  color: #171715;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 0.9s;
+ 
+  
+}
+.button button:hover {
+  background-image: linear-gradient(
+    to right,
+    #75f153 0%,
+    #26720a 51%,
+    #45ef15 100%
+  );
+  transition: 0.5s;
+
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+
+  background-size: 200% auto;
+  box-shadow: 1px 1px 10px #45ef15;
+}
+
+
+.button:active{
+  scale: 0.95;
+}
+
+.last-text {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  font-weight: 600;
+  height: 20px;
+  position: relative;
+  background-size: cover;
+}
+.last-text {
+  background: linear-gradient(to right, #03447f 27%, #fd1d1d 57%, #fcb045 100%);
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: #fff;
+  text-shadow: 10px 8px 20px #ef3c3c;
+  transform: scale(1.1);
+  transition: 1.2s ease;
+}
+.last-text:hover p {
+  transform: scale(1.1);
+  transition: 1.2s ease;
+}
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
